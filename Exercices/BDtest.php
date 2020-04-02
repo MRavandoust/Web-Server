@@ -5,8 +5,5 @@ while($donnee = $reponse-> fetch())
 {
     echo '<p>' . $donnee['email'] . '</p>';
 }
-
-
 ?>
-
 
