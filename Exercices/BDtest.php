@@ -4,6 +4,7 @@ $reponse = $connect->query('SELECT * FROM utilisateurs');
 while($donnee = $reponse-> fetch())
 {
     echo '<p>' . $donnee['email'] . '</p>';
+    
 }
 ?>
 
