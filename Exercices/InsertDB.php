@@ -9,7 +9,7 @@ catch(Exception $e)
 }
 
 $bdd->exec('INSERT INTO jeux_video(nom, possesseur, console, prix, nbre_joueurs_max, commentaires) 
-VALUES(\'Battlefield 1942\', \'Patrick\', \'PC\', 45, 50, \'2nde guerre mondiale\')');
+VALUES(\'Masoud 1975\', \'Patrick\', \'PC\', 45, 50, \'2nde guerre mondiale\')');
 
 /*       Insertion de données variables grâce à une requête préparée
 
@@ -26,6 +26,6 @@ $req->execute(array(
 
 echo 'Le jeu a bien été ajouté !';
 
-$reponse->closeCursor();
+//$reponse->closeCursor();
 
 ?>

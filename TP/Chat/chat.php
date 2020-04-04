@@ -9,45 +9,42 @@
 </head>
 
 <body>
- <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-    <section class="chat" id="chat">
-        <?php
-        try {
-            $bdd = new PDO('mysql:host=localhost;dbname=chat', 'root', '');
-        } catch (Exception $e) {
-            die('Erreur : ' . $e->getMessage());
-        }
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    <h3>My Chatroom</h3>
+    <section class="chat" id="chat"></section>
+ 
 
-        // Récupération des 10 derniers messages
-        $reponse = $bdd->query('SELECT * FROM coversation ORDER BY ID DESC ');
+    <script type="text/javascript" src="jquery3.4.1-min.js"></script>
+    <script>
+        $(document).ready(function() {
+            setInterval(function() {
+                $('#chat').load('dbLoad.php')
+            }, 2000);
+        });
+    </script>
 
-        // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
-        while ($donnees = $reponse->fetch()) {
-            echo '<p><strong>' . htmlspecialchars($donnees['pseudo']) . '</strong> : ' . htmlspecialchars($donnees['message']) . '</p>';
-        }
 
-        ?>
-    </section>
-
+    <div id="gg"></div>
 
 
     <section class="send">
-        <form action="insertBD.php" method="POST" target="dummyframe">
+        <form action="insertDB.php" method="POST" target="dummyframe" id="myForm">
             <input type="text" placeholder="Votre nome" name="pseudo" id="pseudo" />
-            <input type="text" name="message" id="text" />
-           <input type="submit" name="submit" value="send" id="submit" onkeyup="document.location.reload(true)" />
+            <input type="text" name="message" id="message" />
+            <input type="submit" name="submit" value="send" id="submit" onclick="clean()" />
         </form>
-
-        <script type="text/javascript">
-        $("#submit").click(function() {
-                $("#chat").load(" #chat");
-            });
-        </script>
     </section>
 
-
-
-
+    <script>
+        function clean() {
+            if (this.submit) {
+                setTimeout(function() {
+                    document.getElementById('message').value='';
+                    document.getElementById('message').focus();
+                }, 1000);
+            };
+        }
+    </script>
 
 </body>
 
