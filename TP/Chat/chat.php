@@ -26,7 +26,6 @@
 
     <div id="gg"></div>
 
-
     <section class="send">
         <form action="insertDB.php" method="POST" target="dummyframe" id="myForm">
             <input type="text" placeholder="Votre nome" name="pseudo" id="pseudo" />
