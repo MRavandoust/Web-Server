@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="password"] {
+    padding: 6px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    width: 220px;
+}
+
+input[type="text"] {
+    padding: 6px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    width: 220px;
+}
+
+input[type="submit"] {
+    text-align: center;
+    padding: 3px;
+    font-size: 14px;
+    width: 236px;
+    height: 35px;
+    background-color: rgb(100, 100, 247);
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+.cadre {
+    width: 250px;
+    height: 192px;
+    border: 2px solid #ddd;
+    margin: auto;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+form {
+    text-align: left;
+}
+
+table tr {
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+table td {
+    text-align: center;
+    width: 200px;
+    padding: 0;
+}
+
+h3 {
+    text-align: center;
+    margin: 9px;
+}
