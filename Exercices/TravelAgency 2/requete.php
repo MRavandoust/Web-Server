@@ -39,8 +39,7 @@ $req->execute(array(
 
 
 <form action="index.php" method="POST">
-    <input type="submit" name="home" value="Retour à l'accueil"/>
-    <input type="submit" name="prev" value="Page précédente"/>
+    <input type="submit" name="prev" value="Accueil"/>
 </form>
 
 
